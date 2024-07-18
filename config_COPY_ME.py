@@ -4,4 +4,5 @@
 # https://aistudio.google.com/app/apikey
 # 
 
-GOOGLE_API_KEY = "sample-value"
+GEN_AI_KEY = "sample-value"
+GCP_PROJECT_NAME = "sample-value"
