@@ -6,3 +6,6 @@
 
 GEN_AI_KEY = "sample-value"
 GCP_PROJECT_NAME = "sample-value"
+
+# Bucket Name that will be created for you in the project
+GCP_BUCKET_NAME = "manderson-bucket-2"
