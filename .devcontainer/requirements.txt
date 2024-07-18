@@ -1,6 +1,9 @@
 # Google Cloud libraries
 google-cloud-storage
+
+# Google AI libraries
 google-generativeai
+google-cloud-aiplatform
 
 # Additional useful libraries
 requests
