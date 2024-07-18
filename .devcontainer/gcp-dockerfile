@@ -1,3 +1,25 @@
-FROM mcr.microsoft.com/devcontainers/javascript-node:0-18
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install git
+# Use an official Python runtime as the base image
+FROM python:3.12-slim
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    wget \
+    gcc \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Google Cloud SDK
+RUN curl -sSL https://sdk.cloud.google.com | bash
+ENV PATH $PATH:/root/google-cloud-sdk/bin
+
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt

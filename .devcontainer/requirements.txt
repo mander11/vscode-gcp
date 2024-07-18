@@ -1,0 +1,22 @@
+# Google Cloud libraries
+google-cloud-storage
+google-generativeai
+
+# Additional useful libraries
+requests
+pandas
+numpy
+matplotlib
+
+# Web framework (if needed)
+flask
+
+# API development (if needed)
+fastapi
+uvicorn
+
+# Authentication
+google-auth
+
+# Utilities
+python-dotenv
