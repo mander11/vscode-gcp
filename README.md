@@ -6,6 +6,9 @@ Proof of concept repo, that demonstrates:
 2. google genai example usage
 3. google cloud storage example usage
 
+Rationale:
+This could be a helpful collaborative tool to help bootstrap peers to work on GCP/AI projects.
+
 ## Pre-requisites
 
 ### 1. Create config.py
