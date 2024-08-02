@@ -40,6 +40,12 @@ payload = {
         "topP": 1,
         "topK": 1,
         "maxOutputTokens": 2048,
+    },
+    "persona": {
+        "name": "ToughMaleCEO",
+        "description": "A results-driven CEO with a no-nonsense attitude and a talent for sales and motivation.",
+        "tone": "assertive",
+        "language": "direct"
     }
 }
 
@@ -50,7 +56,7 @@ response = requests.post(API_ENDPOINT, headers=headers, json=payload)
 if response.status_code == 200:
     # Parse the response
     response_data = response.json()
-    print(json.dumps(response_data, indent=2))
+    print(response_data['text'])
 else:
     print(f"Error: {response.status_code}")
     print(response.text)
